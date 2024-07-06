@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use CitySeeder;
+use Database\Seeders\StateSeeder as SeedersStateSeeder;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -18,5 +21,9 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        $this->call(CountrySeeder::class);
+        $this->call(SehirSeeder::class);
+        $this->call(IlceSeeder::class);
     }
 }
